@@ -47,6 +47,7 @@ const config = {
     ],
   },
   resolve: {
+    root: `${__dirname}/src`,
     extensions: ['', '.js', '.jsx', '.css', '.json'],
   },
   plugins: [
