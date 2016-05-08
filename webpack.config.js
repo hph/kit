@@ -56,6 +56,10 @@ const config = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
     }),
+    new webpack.ProvidePlugin({
+      Promise: 'imports?this=>global!exports?global.Promise!es6-promise',
+      fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+    }),
     new CleanWebpackPlugin(['build'], { root: __dirname, verbose: false }),
     new HtmlWebpackPlugin({
       template: 'index.ejs',
