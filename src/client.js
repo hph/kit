@@ -5,7 +5,7 @@ import 'normalize.css';
 import App from 'components/app';
 
 
-render(<App />, document.getElementById('app'));
+render(<App />, document.getElementById('container'));
 
 if (module.hot) {
   module.hot.accept();

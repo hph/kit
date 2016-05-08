@@ -62,7 +62,7 @@ const config = {
     }),
     new CleanWebpackPlugin(['build'], { root: __dirname, verbose: false }),
     new HtmlWebpackPlugin({
-      template: 'index.ejs',
+      template: 'template.ejs',
       inject: 'body',
       title: 'Kit',
     }),
