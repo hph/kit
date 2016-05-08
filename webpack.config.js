@@ -4,7 +4,6 @@ const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 const babel = require('./package').babel;
 
@@ -14,6 +13,7 @@ const config = {
   entry: {
     app: [
       'webpack-dev-server/client?http://localhost:8080/',
+      'webpack/hot/only-dev-server',
       './client.js',
     ],
   },
@@ -80,7 +80,6 @@ if (process.env.NODE_ENV === 'production') {
   config.plugins.push(new ExtractTextPlugin('[name]-[contenthash].min.css', {
     allChunks: true,
   }));
-  config.plugins.push(new LodashModuleReplacementPlugin);
   config.plugins.push(new webpack.optimize.DedupePlugin());
   config.plugins.push(new webpack.optimize.OccurrenceOrderPlugin(true));
   config.plugins.push(new webpack.optimize.UglifyJsPlugin({
@@ -93,12 +92,13 @@ if (process.env.NODE_ENV === 'production') {
   }));
   config.output.filename = '[name]-[hash].min.js';
   config.output.hash = true;
-  config.entry.app = [config.entry.app[1]];
+  config.entry.app = [_.last(config.entry.app)];
 } else {
   config.devtool = 'source-map';
   config.devServer = {
     contentBase: `${__dirname}/build`,
     historyApiFallback: true,
+    hot: true,
     stats: {
       colors: true,
       timings: true,
