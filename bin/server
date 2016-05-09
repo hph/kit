@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+'use strict';
+
+require('babel-register');
+
+const { app } = require('../src/server');
+
+app.listen(process.env.PORT || 8080);

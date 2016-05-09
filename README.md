@@ -9,8 +9,9 @@ A base project for modern web applications.
   [ES6](https://github.com/lukehoban/es6features) and
   [JSX](https://facebook.github.io/react/docs/jsx-in-depth.html).
 - [x] [Webpack](https://webpack.github.io/) as a module bundler and build tool.
-  Includes a handy auto-reloading development server and a robust production
-  configuration.
+  Includes a handy auto-reloading
+  ([HMR](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
+  development server and a robust production configuration.
 - [x] [CSS Modules](https://github.com/css-modules/css-modules) and
   [React CSS Modules](https://github.com/gajus/react-css-modules) for locally
   scoped CSS in components.
@@ -25,6 +26,7 @@ A base project for modern web applications.
   consistent stylesheets.
 - [x] [fetch](https://github.com/github/fetch) and
   [Promise](https://github.com/stefanpenner/es6-promise) polyfills.
+- [x] [Express](http://expressjs.com/) backend server for production.
 - [ ] [React Router](https://github.com/reactjs/react-router) as a routing solution
   for the single-page app.
 - [ ] [Redux](http://redux.js.org/) for state management.
@@ -32,4 +34,23 @@ A base project for modern web applications.
   to store the application state safely and in a more performant manner.
 - [ ] Some base components and pages to demonstrate code structure and interop.
 - [ ] Testing framework and configuration.
-- [ ] Backend server (as an API and for production) and server-side rendering.
+- [ ] Server-side rendering.
+- [ ] Compile Webpack bundle in the backend to support using it in development.
+  This would allow us to use it as more than just a static server.
+
+### Setup & usage
+
+This project requires [Node.js](https://nodejs.org/en/) v6.1.0 or above. It is
+best installed via [nvm](https://github.com/creationix/nvm) (`nvm install
+6.1`).
+
+You may fetch the code and set up the project by running:
+
+    git clone git@github.com:hph/kit.git && cd kit
+    npm install
+
+You can now run the server:
+
+    npm start
+
+This will start the development server unless `NODE_ENV` is set to production.
