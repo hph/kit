@@ -27,12 +27,13 @@ A base project for modern web applications.
 - [x] [fetch](https://github.com/github/fetch) and
   [Promise](https://github.com/stefanpenner/es6-promise) polyfills.
 - [x] [Express](http://expressjs.com/) backend server for production.
+- [x] [Redux](http://redux.js.org/) for state management.
+- [x] [TodoMVC](http://todomvc.com/) example showcasing the use of React.js,
+  Redux & CSS modules, along with a sensible directory structure.
 - [ ] [React Router](https://github.com/reactjs/react-router) as a routing solution
   for the single-page app.
-- [ ] [Redux](http://redux.js.org/) for state management.
 - [ ] [Immutable](https://facebook.github.io/immutable-js/) for data structures
   to store the application state safely and in a more performant manner.
-- [ ] Some base components and pages to demonstrate code structure and interop.
 - [ ] Testing framework and configuration.
 - [ ] Server-side rendering.
 - [ ] Compile Webpack bundle in the backend to support using it in development.
