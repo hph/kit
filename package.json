@@ -1,6 +1,11 @@
 {
   "private": true,
+  "engines": {
+    "node": ">=6.1.0",
+    "npm": "3.8.6"
+  },
   "scripts": {
+    "postinstall": "if-env NODE_ENV=production && npm run build || :",
     "start": "if-env NODE_ENV=production && clusterfork bin/server || webpack-dev-server --hot",
     "build": "webpack",
     "clean": "rimraf build",

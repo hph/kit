@@ -1,0 +1,6 @@
+{
+  "name": "Kit",
+  "description": "A base project for modern web applications",
+  "repository": "https://github.com/hph/kit",
+  "keywords": ["react", "babel", "webpack", "express", "redux"]
+}

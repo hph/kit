@@ -1,6 +1,8 @@
 # kit
 
-A base project for modern web applications.
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+> A base project for modern web applications.
 
 ### Tech stack
 
