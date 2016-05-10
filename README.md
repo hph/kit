@@ -15,8 +15,11 @@
 - [Webpack](https://webpack.github.io/) as a module bundler and build tool,
   including a handy auto-reloading
   ([HMR](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html))
-  development server and a robust production configuration.
-- [Express](http://expressjs.com/) to serve the app in production.
+  development server and a robust production configuration. The front end gets
+  a 100/100 score from
+  [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/).
+- [Express](http://expressjs.com/) to serve the app in production. The app gets
+  an "A" from [SecurityHeaders.io](https://securityheaders.io/).
 - [CSS Modules](https://github.com/css-modules/css-modules) and
   [React CSS Modules](https://github.com/gajus/react-css-modules) for locally
   scoped CSS.
