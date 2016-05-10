@@ -9,7 +9,7 @@ import * as TodoActions from 'actions';
 import styles from './styles';
 
 
-class App extends Component {
+class TodoApp extends Component {
 
   static propTypes = {
     todos: PropTypes.array.isRequired,
@@ -43,4 +43,4 @@ function mapDispatchToProps (dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(CSSModules(App, styles));
+)(CSSModules(TodoApp, styles));

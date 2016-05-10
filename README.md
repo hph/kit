@@ -6,40 +6,41 @@
 
 ### Tech stack
 
-- [x] [React.js](https://facebook.github.io/react/) for front-end components.
-- [x] [Babel](http://babeljs.io/docs/plugins/) and various plugins to transpile
+- [React.js](https://facebook.github.io/react/) as the view layer.
+- [Redux](http://redux.js.org/) for state management and
+  [Redux DevTools](https://github.com/gaearon/redux-devtools) for debugging it.
+- [Babel](http://babeljs.io/docs/plugins/) and various plugins to transpile
   [ES6](https://github.com/lukehoban/es6features) and
   [JSX](https://facebook.github.io/react/docs/jsx-in-depth.html).
-- [x] [Webpack](https://webpack.github.io/) as a module bundler and build tool.
-  Includes a handy auto-reloading
-  ([HMR](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
+- [Webpack](https://webpack.github.io/) as a module bundler and build tool,
+  including a handy auto-reloading
+  ([HMR](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html))
   development server and a robust production configuration.
-- [x] [CSS Modules](https://github.com/css-modules/css-modules) and
+- [Express](http://expressjs.com/) to serve the app in production.
+- [CSS Modules](https://github.com/css-modules/css-modules) and
   [React CSS Modules](https://github.com/gajus/react-css-modules) for locally
-  scoped CSS in components.
-- [x] [PostCSS](http://postcss.org/) for various CSS plugins, such as
+  scoped CSS.
+- [TodoMVC](http://todomvc.com/) example showcasing the use of React.js, Redux
+  & CSS modules, along with a sensible directory structure.
+- [PostCSS](http://postcss.org/) for various CSS plugins, such as
   [Autoprefixer](https://github.com/postcss/autoprefixer).
-- [x] [Lodash](https://lodash.com/) to downplay the lack of a standard library in
+- [Lodash](https://lodash.com/) to downplay the lack of a standard library in
   JavaScript.
-- [x] [ESLint](http://eslint.org/) with the [Airbnb
-  styleguide](https://github.com/airbnb/javascript) configuration for code
-  quality.
-- [x] [Stylelint](http://stylelint.io/) with its standard ruleset for more
-  consistent stylesheets.
-- [x] [fetch](https://github.com/github/fetch) and
+- [ESLint](http://eslint.org/) with the [Airbnb
+  styleguide](https://github.com/airbnb/javascript) configuration and
+  [Stylelint](http://stylelint.io/) to ensure code quality.
+- [fetch](https://github.com/github/fetch) and
   [Promise](https://github.com/stefanpenner/es6-promise) polyfills.
-- [x] [Express](http://expressjs.com/) backend server for production.
-- [x] [Redux](http://redux.js.org/) for state management.
-- [x] [TodoMVC](http://todomvc.com/) example showcasing the use of React.js,
-  Redux & CSS modules, along with a sensible directory structure.
-- [ ] [React Router](https://github.com/reactjs/react-router) as a routing solution
+
+### Coming soon
+
+- [React Router](https://github.com/reactjs/react-router) as a routing solution
   for the single-page app.
-- [ ] [Immutable](https://facebook.github.io/immutable-js/) for data structures
-  to store the application state safely and in a more performant manner.
-- [ ] Testing framework and configuration.
-- [ ] Server-side rendering.
-- [ ] Compile Webpack bundle in the backend to support using it in development.
-  This would allow us to use it as more than just a static server.
+- [Immutable](https://facebook.github.io/immutable-js/) for data structures to
+  store the application state safely and in a more performant manner.
+- Testing framework and configuration.
+- Server-side rendering.
+- Allow using the Express server as a general-purpose backend.
 
 ### Setup & usage
 
