@@ -81,7 +81,7 @@ if (process.env.NODE_ENV === 'production') {
       'css?minimize&modules&importLoaders=1&localIdentName=[hash:base64:5]!postcss'
     ),
   };
-  config.plugins.push(new ExtractTextPlugin('[name]-[contenthash].min.css', {
+  config.plugins.push(new ExtractTextPlugin('/[name]-[contenthash].min.css', {
     allChunks: true,
   }));
   config.plugins.push(new webpack.optimize.DedupePlugin());
@@ -94,7 +94,7 @@ if (process.env.NODE_ENV === 'production') {
     comments: false,
     sourceMap: false,
   }));
-  config.output.filename = '[name]-[hash].min.js';
+  config.output.filename = '/[name]-[hash].min.js';
   config.output.hash = true;
   config.entry.app = [_.last(config.entry.app)];
 } else {
