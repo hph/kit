@@ -50,11 +50,16 @@ class Footer extends Component {
 
   renderClearButton () {
     const { completedCount, onClearCompleted } = this.props;
-    return completedCount > 0 ? (
-      <button styleName="clear-completed" onClick={onClearCompleted}>
-        Clear completed
-      </button>
-    ) : null;
+
+    if (completedCount > 0) {
+      return (
+        <button styleName="clear-completed" onClick={onClearCompleted}>
+          Clear completed
+        </button>
+      );
+    }
+
+    return null;
   }
 
   render () {

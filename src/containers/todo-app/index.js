@@ -18,6 +18,7 @@ class TodoApp extends Component {
 
   render () {
     const { todos, actions } = this.props;
+
     return (
       <div styleName="root">
         <Header addTodo={actions.addTodo} />
@@ -39,6 +40,7 @@ function mapDispatchToProps (dispatch) {
     actions: bindActionCreators(TodoActions, dispatch),
   };
 }
+
 
 export default connect(
   mapStateToProps,

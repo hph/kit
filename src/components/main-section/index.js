@@ -20,10 +20,9 @@ class MainSection extends Component {
     actions: PropTypes.object.isRequired,
   };
 
-  constructor (props, context) {
-    super(props, context);
-    this.state = { filter: SHOW_ALL };
-  }
+  state = {
+    filter: SHOW_ALL,
+  };
 
   handleClearCompleted = () => {
     this.props.actions.clearCompleted();
@@ -35,14 +34,19 @@ class MainSection extends Component {
 
   renderToggleAll (completedCount) {
     const { todos, actions } = this.props;
-    return todos.length > 0 ? (
-      <input
-        styleName="toggle-all"
-        type="checkbox"
-        checked={completedCount === todos.length}
-        onChange={actions.completeAll}
-      />
-    ) : null;
+
+    if (todos.length > 0) {
+      return (
+        <input
+          styleName="toggle-all"
+          type="checkbox"
+          checked={completedCount === todos.length}
+          onChange={actions.completeAll}
+        />
+      );
+    }
+
+    return null;
   }
 
   renderFooter (completedCount) {
@@ -50,15 +54,19 @@ class MainSection extends Component {
     const { filter } = this.state;
     const activeCount = todos.length - completedCount;
 
-    return todos.length ? (
-      <Footer
-        completedCount={completedCount}
-        activeCount={activeCount}
-        filter={filter}
-        onClearCompleted={this.handleClearCompleted}
-        onShow={this.handleShow}
-      />
-    ) : null;
+    if (todos.length) {
+      return (
+        <Footer
+          completedCount={completedCount}
+          activeCount={activeCount}
+          filter={filter}
+          onClearCompleted={this.handleClearCompleted}
+          onShow={this.handleShow}
+        />
+      );
+    }
+
+    return null;
   }
 
   render () {
@@ -72,7 +80,7 @@ class MainSection extends Component {
     );
 
     return (
-      <section styleName="main">
+      <section styleName="root">
         {this.renderToggleAll(completedCount)}
         <ul styleName="todo-list">
           {filteredTodos.map(todo =>

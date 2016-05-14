@@ -15,8 +15,8 @@ class TodoTextInput extends Component {
     newTodo: PropTypes.bool,
   };
 
-  constructor (props, context) {
-    super(props, context);
+  constructor (...args) {
+    super(...args);
     this.state = {
       text: this.props.text || '',
     };
@@ -45,7 +45,6 @@ class TodoTextInput extends Component {
   render () {
     return (
       <input
-        styleName="input"
         styleName={classnames({
           edit: this.props.editing,
           'new-todo': this.props.newTodo,

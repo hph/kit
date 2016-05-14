@@ -53,7 +53,7 @@
   display: inline;
 }
 
-.filters li a {
+.filters a {
   margin: 3px;
   padding: 3px 7px;
   border: 1px solid transparent;
@@ -62,16 +62,6 @@
   text-decoration: none;
 }
 
-.filters li a.selected,
-.filters li a:hover {
-  border-color: rgba(175, 47, 47, 0.1);
-}
-
-.filters li a.selected {
-  border-color: rgba(175, 47, 47, 0.2);
-}
-
-.filters .selected,
 .filters a:hover {
   border-color: rgba(175, 47, 47, 0.1);
 }
