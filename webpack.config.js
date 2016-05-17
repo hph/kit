@@ -14,7 +14,7 @@ const config = {
     app: [
       'webpack-dev-server/client?http://localhost:8080/',
       'webpack/hot/only-dev-server',
-      './client.js',
+      './client',
     ],
   },
   output: {
@@ -62,7 +62,7 @@ const config = {
     }),
     new CleanWebpackPlugin(['build'], { root: __dirname, verbose: false }),
     new HtmlWebpackPlugin({
-      template: 'template.ejs',
+      template: './template/index.ejs',
       inject: 'body',
       title: 'Kit',
     }),
