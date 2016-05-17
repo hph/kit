@@ -19,7 +19,7 @@ const config = {
   },
   output: {
     path: `${__dirname}/build`,
-    filename: '[name].js',
+    filename: '/[name].js',
   },
   module: {
     loaders: [
