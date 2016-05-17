@@ -35,15 +35,21 @@
 - [fetch](https://github.com/github/fetch) and
   [Promise](https://github.com/stefanpenner/es6-promise) polyfills.
 
-### Coming soon
+### What's not included
 
-- [React Router](https://github.com/reactjs/react-router) as a routing solution
-  for the single-page app.
-- [Immutable](https://facebook.github.io/immutable-js/) for data structures to
-  store the application state safely and in a more performant manner.
-- Testing framework and configuration.
-- Server-side rendering.
-- Allow using the Express server as a general-purpose backend.
+- [React Router](https://github.com/reactjs/react-router) is a good routing
+  solution, but one not required for the example app. It is quite trivial set
+  it up yourself.
+- [Immutable](https://facebook.github.io/immutable-js/) is recommended for
+  immutable data structures to be used along with Redux.
+- A testing framework is not included, simply because there are so many
+  different approaches. I recommend [Karma](http://karma-runner.github.io) and
+  [Enzyme](http://airbnb.io/enzyme/), although screenshot testing is also
+  excellent.
+- Server-side rendering is also not included. If you require it, I suggest
+  looking at the various examples elsewhere showcasing it. Depending on how you
+  want to build your application, server-side rendering requires a more complex
+  setup. For now, it will not be included in this project.
 
 ### Setup & usage
 
